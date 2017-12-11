@@ -15,3 +15,6 @@
 * Service Register, using zookeeper as Service Registry
 * Service Discovery, using zookeeper as Service Discovery
 * If specify next Micro Service name, find the service through Service Discovery and send request through http call
+
+## Run with command line arguments
+* java -jar omc-test-service-0.0.1-SNAPSHOT.jar --server.port=9000 --zookeeper.host=127.0.0.1 --zookeeper.port=2181 --omc.service.name=OMC_EventMgr_TestService --omc.request.queue.max.size=10 --omc.delivery.queue.max.size=10 --omc.request.task.thread.size=1 --omc.delivery.task.thread.size=1 --omc.service.registry.mode=zookeeper --omc.service.registry.name=/OMC/EventMgr/TestService --omc.delivery.mode=/OMC/EventMgr/TestService --omc.delivery.retry.count=1000 --omc.service.discovery.mode=zookeeper --logging.level.com.omc=DEBUG --logging.file=omc.log
